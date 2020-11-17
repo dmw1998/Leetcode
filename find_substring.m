@@ -1,6 +1,7 @@
 function [substring, len] = find_substring(str)
 
 n = strlength(str);
+substring = str;
 len = 0;
 
 for i = 1 : n
@@ -23,4 +24,7 @@ for i = 1 : n
         end
     end
 end
+
+len = strlength(substring);
+
 end
