@@ -6,3 +6,6 @@
 nums = [1, 0, -1, 0, -2, 2];
 target = 0;
 output = find_target_sum_quadruplet(nums,target)
+
+nums = [];
+output = find_target_sum_quadruplet(nums,target)
