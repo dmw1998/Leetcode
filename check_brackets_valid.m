@@ -6,7 +6,7 @@ n = length(str);
 m = 0;
 for i = 1 : n
     if str(i) == ' '
-        d = 0
+        d = 0;
         continue;
     elseif str(i) == '('
         m = m + 1;
