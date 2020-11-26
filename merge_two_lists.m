@@ -1,6 +1,6 @@
 function lresult = merge_two_lists(l1,l2)
 
-if isnan(l1.Data) 
+if isnan(l1.Data)
     lresult = l2;
     return
 elseif isnan(l2.Data)
@@ -10,7 +10,7 @@ elseif l1.Data < l2.Data
     lresult = l1;
     temp = l1.Next;
     pointer = l2;
-else
+elseif l1.Data >= l2.Data
     lresult = l2;
     temp = l2.Next;
     pointer = l1;
