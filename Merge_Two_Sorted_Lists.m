@@ -28,3 +28,10 @@ for i = 1 : 6
     temp = temp.Next;
 end
 data_set
+
+l3 = dlnode(NaN);       % The default of .Data is array, so put in an NaN 
+l4 = dlnode(NaN);
+output = merge_two_lists(l3,l4)
+
+l5 = dlnode(0);
+output = merge_two_lists(l3,l5)
