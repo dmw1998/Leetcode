@@ -1,15 +1,10 @@
-function swap_nodes(node1,node2)
+function head = swap_nodes(head)
 
-% temp1 = node1.Prev;
-temp2 = node1.Next;
-% temp3 = node2.Prev;
-temp4 = node2.Next;
+node = head.Next;
+node.insertBefore(head);
+head = node;
 
-% node1.Prev = temp3;
-removeNode(node1.Next);
-temp4.insertAfter(node1);
-% node2.Prev = temp1;
-removeNode(node2.Next)
-temp2.insertAfter(node2)
+node2 = node.Next.Next;
+node2.Next.insertBefore(node2)
 
 end
