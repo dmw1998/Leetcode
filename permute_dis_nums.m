@@ -11,18 +11,32 @@ end
 list1 = nums';
 list2 = nums';
 
-temp_result = build_list1_list2(list1,list2);
+result = build_list1_list2(list1,list2);
 
-for k = 2 : n - 1
-    temp_result = build_list1_list2(temp_result,list2);
-end
-
-m = size(temp_result,1);
-
-for i = 1 : m
-    if sort(temp_result(i,:)) == sort(nums)
-        result = [result; temp_result(i,:)];
+for p = 2 : n - 1
+    temp_result = build_list1_list2(result,list2);
+    
+    m = size(temp_result,1);
+    l = size(temp_result,2);
+    result = [];
+    for k = 1 : m
+        d = true;
+        for i = 1 : l-1
+            for j = i+1 : l
+                if temp_result(k,i) == temp_result(k,j)
+                    d = false;
+                    break
+                end
+            end
+            if ~d
+                break
+            end
+        end
+        if d
+            result = [result; temp_result(k,:)];
+        end
     end
+    
 end
 
 end
