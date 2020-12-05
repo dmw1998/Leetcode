@@ -9,3 +9,8 @@ output = permute_dis_nums(nums)
 
 nums = [1];
 output = permute_dis_nums(nums)
+
+tic
+nums = 1:6;
+output = permute_dis_nums(nums);
+toc
