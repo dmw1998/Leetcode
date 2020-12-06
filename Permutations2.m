@@ -9,5 +9,5 @@ output = permute_nums(nums)
 
 tic
 nums = [1, 2, 3, 4, 5, 6, 7, 8];
-output = permute_nums(nums)
+output = permute_nums(nums)£»
 toc
