@@ -2,7 +2,7 @@ function result = isUglyNumber(num)
 
 result = true;
 
-if num <= 1
+if num < 1
     result = false;
     return
 end
