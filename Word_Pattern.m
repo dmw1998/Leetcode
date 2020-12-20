@@ -4,16 +4,16 @@
 
 pattern = "abba";
 s = "dog cat cat dog";
-output = if_mathch_pattern(pattern, s)
+output = if_match_pattern(pattern, s)
 
 pattern = "abba";
 s = "dog cat cat fish";
-output = if_mathch_pattern(pattern, s)
+output = if_match_pattern(pattern, s)
 
 pattern = "aaaa";
 s = "dog cat cat dog";
-output = if_mathch_pattern(pattern, s)
+output = if_match_pattern(pattern, s)
 
 pattern = "abba";
 s = "dog dog dog dog";
-output = if_mathch_pattern(pattern, s)
+output = if_match_pattern(pattern, s)
