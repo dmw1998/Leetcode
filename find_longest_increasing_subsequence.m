@@ -1,21 +1,35 @@
 function result = find_longest_increasing_subsequence(nums)
 
-result = 0;
 n = length(nums);
 
-for i = 1 : n-1
-    counts = 1;
-    temp = nums(i);
+if n < 2
+    result = n;
+    return
+end
+
+cell = [nums(1)];
+
+for i = 2 : n
+    r = length(cell);
+    if nums(i) > cell(r)
+        cell = [cell, nums(i)];
+        r = r + 1;
+    end
     
-    for j = i+1 : n
-        if nums(j) > temp
-            counts = counts + 1;
-            temp = nums(j);
+    l = 1;
+    while l < r
+        mid = fix((l + r)/2);
+        if cell(mid) < nums(i)
+            l = mid + 1;
+        else
+            r = mid;
         end
     end
     
-    result = max(counts,result);
+    cell(l) = nums(i);
     
 end
+
+result = length(cell);
 
 end
