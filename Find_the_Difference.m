@@ -14,3 +14,7 @@ output = findTheDifference(s, t)
 s = "a";
 t = "aa";
 output = findTheDifference(s, t)
+
+s = "ae";
+t = "aea";
+output = findTheDifference(s, t)
