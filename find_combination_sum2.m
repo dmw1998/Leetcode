@@ -16,7 +16,7 @@ for i = 1 : n
         nums = [nums; candidates(i)];
     elseif candidates(i) == target
         temp = zeros(1,n);
-        temp(1,1) = candidates(i);
+        temp(1) = candidates(i);
         result = [result; temp];
     end
 end
@@ -93,7 +93,7 @@ for i = 1 : k
     
 end
 
-result = list3;
+% result = list3;
 
 end
 
